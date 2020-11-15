@@ -3,7 +3,7 @@
 
 title: "Black, East Asian, and White women’s perceptions of how race affects their experiences as women."
 event: "Society of Personality and Social Psychology Annual Conference 2021"
-event_url: "https://meeting.spsp.org/programming"
+event_url: ""
 location: 
 address:
   street:
@@ -21,7 +21,7 @@ abstract: "Intersectional approaches suggest that women’s experiences may diff
 #all_day: false
 
 # Schedule page publish date (NOT talk date).
-#publishDate: 2020-11-15T12:30:12-05:00
+publishDate: 
 
 authors: []
 tags: []

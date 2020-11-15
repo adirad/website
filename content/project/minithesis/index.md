@@ -7,7 +7,7 @@ summary: "Mini-Thesis Project. Compared how participants rated HIV-positive and 
 authors: []
 tags: []
 categories: []
-date: 2020-11-15T11:39:57-05:00
+#date: 2020-11-15T11:39:57-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
