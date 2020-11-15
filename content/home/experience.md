@@ -18,27 +18,31 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "CEO"
-  company = "GenCoin"
+  title = "Graduate Teaching Assistant"
+  company = "Department of Psychology"
   company_url = ""
-  location = "California"
-  date_start = "2017-01-01"
+  location = "University of Western Ontario"
+  date_start = "2020-09-01"
   date_end = ""
+  description = """
+  * The Psychology of Sex, Dr. Corey Issacs
+
+  """
+[[experience]]
+  title = "Lab Manager"
+  company = "Stigma and Motivation Lab"
+  company_url = "http://www.neellab.ca/"
+  location = "University of Toronto "
+  date_start = "2019-07-01"
+  date_end = "2020-06-30"
   description = """
   Responsibilities include:
   
-  * Analysing
-  * Modelling
-  * Deploying
+  * Supported numerous aspects of lab research projects: conducted literature reviews, created study stimuli, provided feedback on study designs, and cleaned and analyzed data.
+  * Recruited, trained, and supervised undergraduate research assistants to assist with lab-related tasks and ongoing research. 
+  * Provided crucial administrative support with moving the lab to a new space: developed protocols for in-lab procedures and using the space, created and maintained the lab website.
+
   """
 
-[[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
 
 +++
