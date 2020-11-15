@@ -1,12 +1,13 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "My Project Name"
-summary: ""
+title: "Consequences of dehumanization of people living with HIV."
+summary: "Mini-Thesis Project. Compared how participants rated HIV-positive and HIV-negative individuals on the Ascent of Man Blatant Dehumanization Scale and the Mind Perception Scale and how these ratings affect attitudes towards HIV-positive individuals. Conducted at the Social, Perception, and Cognition Lab at the University of Toronto, under the supervision of Drs. Jason Deska and Nicholas Rule.
+"
 authors: []
 tags: []
 categories: []
-date: 2020-11-14T23:06:08-05:00
+date: 2020-11-15T11:39:57-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
