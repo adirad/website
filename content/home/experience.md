@@ -32,17 +32,11 @@ date_format = "Jan 2006"
   title = "Lab Manager"
   company = "Stigma and Motivation Lab"
   company_url = "http://www.neellab.ca/"
-  location = "University of Toronto "
+  location = "Department of Psycholgy - University of Toronto "
   date_start = "2019-07-01"
   date_end = "2020-06-30"
-  description = """
-  Responsibilities include:
-  
-  * Supported numerous aspects of lab research projects: conducted literature reviews, created study stimuli, provided feedback on study designs, and cleaned and analyzed data.
-  * Recruited, trained, and supervised undergraduate research assistants to assist with lab-related tasks and ongoing research. 
-  * Provided crucial administrative support with moving the lab to a new space: developed protocols for in-lab procedures and using the space, created and maintained the lab website.
+  description = ""
 
-  """
 
 
 +++
