@@ -1,7 +1,8 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Black, East Asian, and White women’s perceptions of how race affects their experiences as women."
+title: "Black, East Asian, and White women’s perceptions of how race affects their experiences as women.
+Coauthors: Jordana Schiralli and Dr. Rebecca Neel"
 event: "Society of Personality and Social Psychology Annual Conference 2021"
 event_url: 
 location: Virtual 
@@ -16,9 +17,9 @@ abstract: "Intersectional approaches suggest that women’s experiences may diff
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-#date: 2020-11-15T12:30:12-05:00
+date: 2021-02-11
 #date_end: 2020-11-15T12:30:12-05:00
-#all_day: false
+all_day: true
 
 # Schedule page publish date (NOT talk date).
 publishDate: "2020-12-01T00:00:00Z"
