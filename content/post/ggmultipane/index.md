@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Visualizing Multiple Graphs in one Figure in R"
+title: "Multiple Panel Figures in R"
 subtitle: ""
 summary: ""
 authors: []
@@ -28,12 +28,11 @@ image:
 projects: []
 ---
 
-
-Visualizing data can be difficult when you are trying to present multiple variables in one graph. Outlined below are multiple methods that might be useful in displaying your data. In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). 
+Visualizing data can be difficult when you are trying to present multiple variables in one graph. Outlined below are multiple methods that might be useful in displaying your data. 
 
 ##### Load in Dataset 
 
-This package includes two datasets but we will use "penguins", see ?penguins for more information. Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. 
+In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use "penguins", see ?penguins for more information. Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. 
 
 ```{r dataset, warning=F}
 library(palmerpenguins)
@@ -42,7 +41,10 @@ head(penguins)
 penguins <- na.omit(penguins) 
 ```
 
-## Multi-panel plots using base R
+{{% toc %}}
+
+
+## Using base R 
 
 First, let's look at the relationship between bill length and bill depth in penguins. 
 ```{r pressure, echo=F}
@@ -128,9 +130,9 @@ layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-
 {{< figure library="true" src="layout.png" >}}
 
 
-### Marginal Plots
+## Marginal Plots 
 
-Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra:ggMarginal. Using this method, we see the the marginal distributions of the x- and y- axis within the scatterplot. You do lose some information in this marginal plot, as it only gives you the boxplots of cumulative bill depth and bill length whereas the previous two plots can separate the boxplot by each species. 
+Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra:ggMarginal. This is not a multi panel graph. Using this method, we see the the marginal distributions of the x- and y- axis within the scatterplot. You lose some information in this marginal plot, as it only gives you the boxplots of cumulative bill depth and bill length whereas the previous two plots can separate the boxplot by each species. 
 
 ```{r marginal, echo=T, warning=F}
 library(ggplot2) #for creating figures 
@@ -144,8 +146,7 @@ marginal
 ```
 {{< figure library="true" src="marginal.png" >}}
 
-
-## Multi-panel plots using ggplot2::facet_wrap
+## Using ggplot2::facet_wrap
 
 Now, we want to create figures to visualize number of penguins in the dataset by sex(2: Male and Female) and species(3: Adelie, Chinstrap, and Gentoo). Plotting all of this information in one graph can be done but it may be hard to read: 
 
@@ -187,7 +188,7 @@ As you can see, both these graphs display information with varying efficacy:
 
 {{< figure library="true" src="facet.png">}}
 
-## Multi-panel plots using ggpubr::ggarrange
+## Using ggpubr::ggarrange
 
 Finally, we want to see how body mass (g) relates to bill length (mm), bill depth (mm), and flipper length (mm)) relate to each other.Using ggpubr::ggarrange, we can look at all these relationships side by side:
 
@@ -228,3 +229,5 @@ multi_plot <- annotate_figure(multi_plot,
 multi_plot 
 ```
 {{< figure library="true" src="multiplot.png" >}}
+
+Thus, there are multiple ways of creating multipanel plots in R. 
