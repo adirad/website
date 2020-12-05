@@ -66,3 +66,5 @@ user_groups:
 ---
 
 Adira Daniel (she/ her) is a M.Sc. student in Social, Personality, and Developmental Psychology. Her research interests include romantic relationships and intergroup variables such as culture or racial identity. Specifically, she is interested in examining whether and how differing intergroup identities within romantic couples affects the longevity and quality of those relationships. Outside of psychology, her greatest passions are coffee and succulents.
+
+{{% staticref "files/cv.pdf" %}}Download my CV{{% /staticref %}}.
