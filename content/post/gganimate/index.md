@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Gganimate"
+title: "Moving Pictures?! Animated Figures in R"
 subtitle: ""
 summary: ""
 authors: []
@@ -27,4 +27,3 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
-heOSICF OEP
