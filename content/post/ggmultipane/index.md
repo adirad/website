@@ -127,11 +127,10 @@ layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-
 ```
 {{< figure library="true" src="layout.png" >}}
 
+
 ### Marginal Plots
 
-Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra:ggMarginal. Using this method, we see the the marginal distributions of the x- and y- axis with the scatterplot. 
-
-First, we must load in the relevant libraries then we can create these plots:
+Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra:ggMarginal. Using this method, we see the the marginal distributions of the x- and y- axis within the scatterplot. You do lose some information in this marginal plot, as it only gives you the boxplots of cumulative bill depth and bill length whereas the previous two plots can separate the boxplot by each species. 
 
 ```{r marginal, echo=T, warning=F}
 library(ggplot2) #for creating figures 
@@ -144,6 +143,7 @@ marginal<- ggMarginal(marginal, type="boxplot")
 marginal
 ```
 {{< figure library="true" src="marginal.png" >}}
+
 
 ## Multi-panel plots using ggplot2::facet_wrap
 
