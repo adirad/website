@@ -53,6 +53,7 @@ plot(penguins$bill_length_mm, penguins$bill_depth_mm,
      ylab="Bill Depth (mm)",
      main="A: Bill Length by Bill Depth ")
 ```
+{{< figure library="true" src="lengthvdepth.png" >}}
 
 However, in addition to this, we want to visually display information about the distribution of our x-variable (bill length) and y-variable (bill depth) using boxplots. 
 
@@ -67,6 +68,7 @@ b<- boxplot(penguins$bill_length_mm ~ penguins$species,
         main="C: Bill Length by species")
 box <- rbind(a,b)
 ```
+{{< figure library="true" src="Rplot.png" >}}
 
 Using the par(mfrow=) parameter or layout() functions, we can adjust the plotting space to fit multiple plots in base R.
 
@@ -91,6 +93,7 @@ parameter <- boxplot(penguins$bill_length_mm ~ penguins$species,
         ylab="Bill Length (mm)",
         main="C: Bill Length by species")
 ```
+{{< figure library="true" src="parameter.png" >}}
 
 #### layout() function 
 
@@ -100,6 +103,7 @@ The layout() function can give us more control over the plotting space. For exam
 layout(matrix(c(1,1,2,3), 2, 2, byrow = T)) 
 layout.show(n=3) 
 ```
+{{< figure library="true" src="layoutshow.png" >}}
 
 Using the layout() function, we can plot the same graphs in an adjusted plot space: 
 
@@ -121,6 +125,7 @@ layout <- boxplot(penguins$bill_length_mm ~ penguins$species,
         main="C: Bill Length by species")
 layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-1)
 ```
+{{< figure library="true" src="layout.png" >}}
 
 ### Marginal Plots
 
@@ -138,6 +143,7 @@ marginal <- ggplot(penguins, aes(x=bill_length_mm, y=bill_depth_mm, color=specie
 marginal<- ggMarginal(marginal, type="boxplot")
 marginal
 ```
+{{< figure library="true" src="marginal.png" >}}
 
 ## Multi-panel plots using ggplot2::facet_wrap
 
@@ -157,6 +163,8 @@ peng <- ggplot(penguins, aes(x=species, fill=sex))+
        fill="Penguin Sex") #change the title of the legend
 peng 
 ```
+{{< figure library="true" src="peng.png" >}}
+
 More information about how to use the RColorBrewer package can be found [here](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#:~:text=Display%20all%20brewer%20palettes,-To%20display%20all&text=The%20palettes%20names%20are%20%3A%20Blues,YlGn%2C%20YlGnBu%20YlOrBr%2C%20YlOrRd.). Further information on how to use color to your advantage in ggplots, see [here](http://rstudio-pubs-static.s3.amazonaws.com/5312_98fc1aba2d5740dd849a5ab797cc2c8d.html) and [here](https://drsimonj.svbtle.com/pretty-histograms-with-ggplot2).
 
 A different method of displaying the count of penguins separated by sex and gender is by using ggplot2:facet_wrap function. This function will allow you to create multiple panels using information from one categorical variable. This figure might be a bit easier to read as the variables being organized can be visualized a bit clearer.
@@ -173,14 +181,11 @@ peng_facet <- ggplot(penguins, aes(x=species, fill=sex))+
        fill="Penguin Sex") #change the title of the legend
 peng_facet
 ```
+{{< figure library="true" src="peng_facet.png" >}}
 
 As you can see, both these graphs display information with varying efficacy:
 
-```{r facetcompare, echo=F, warning=F}
-library(ggpubr)
-facet <- ggarrange(peng,peng_facet) #list the figures that you want to put together 
-facet #view the final graph 
-```
+{{< figure library="true" src="facet.png">}}
 
 ## Multi-panel plots using ggpubr::ggarrange
 
@@ -222,4 +227,4 @@ multi_plot <- annotate_figure(multi_plot,
                               bottom= text_grob("Body Mass (g)", color = "black"))
 multi_plot 
 ```
-
+{{< figure library="true" src="multiplot.png" >}}
