@@ -157,7 +157,7 @@ peng <- ggplot(penguins, aes(x=species, fill=sex))+
        fill="Penguin Sex") #change the title of the legend
 peng 
 ```
-More information about how to use the RColorBrewer package can be found [here](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#:~:text=Display%20all%20brewer%20palettes,-To%20display%20all&text=The%20palettes%20names%20are%20%3A%20Blues,YlGn%2C%20YlGnBu%20YlOrBr%2C%20YlOrRd.). Further information on how to use color to your advantage in ggplots, see [here](http://rstudio-pubs-static.s3.amazonaws.com/5312_98fc1aba2d5740dd849a5ab797cc2c8d.html) and [here](https://drsimonj.svbtle.com/pretty-histograms-with-ggplot2). All colors available in R can be found [here](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf).
+More information about how to use the RColorBrewer package can be found [here](https://www.datanovia.com/en/blog/the-a-z-of-rcolorbrewer-palette/#:~:text=Display%20all%20brewer%20palettes,-To%20display%20all&text=The%20palettes%20names%20are%20%3A%20Blues,YlGn%2C%20YlGnBu%20YlOrBr%2C%20YlOrRd.). Further information on how to use color to your advantage in ggplots, see [here](http://rstudio-pubs-static.s3.amazonaws.com/5312_98fc1aba2d5740dd849a5ab797cc2c8d.html) and [here](https://drsimonj.svbtle.com/pretty-histograms-with-ggplot2).
 
 A different method of displaying the count of penguins separated by sex and gender is by using ggplot2:facet_wrap function. This function will allow you to create multiple panels using information from one categorical variable. This figure might be a bit easier to read as the variables being organized can be visualized a bit clearer.
 

@@ -1,11 +1,11 @@
 # Theme metadata
-name = "DarkR"
+name = "Darker"
 
 # Is theme light or dark?
 light = false
 
 # Primary
-primary = "rgb(251, 191, 183)"
+primary = "rgb(234, 242, 250)"
 
 # Menu
 menu_primary = "rgb(247, 247, 247)"
