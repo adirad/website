@@ -11,10 +11,8 @@ location: Virtual
   #region:
   #postcode:
   #country:
-summary: "Do women percieve that race affects their experiences as women? Do they think this differs for women of other races? 560 Black, East Asian, and White women described how race influences their own and other-race women’s experiences. Preliminary observations suggest differences that will be formally tested, e.g.,  Black and East Asian women feel stereotyped as strong or feminine, respectively.
-**Coauthors**: Jordana Schiralli and Dr. Rebecca Neel"
-abstract: "Intersectional approaches suggest that women’s experiences may differ depending on their race. Do women themselves perceive these race-based differences, and how do they think their own experiences differ from women of other races? We asked 560 monoracial Black, East Asian, and White women a series of open-ended questions about how their race influences their experience as a woman (if at all), and whether they perceive their experiences as being different from women of other racial groups. These open-ended data are currently being analyzed by a team of research assistants for common themes and patterns. Preliminary observations suggest that Black women often reported being expected by others to be strong, whereas Asian women reported having to fulfill the stereotypical role of “mother” and “wife.” Additionally, White women perceived Asian and Black women as receiving greater negative treatment due to experiencing both racism and sexism. This research helps us understand the intricacies of how race impacts women’s experiences as well as their perceptions of others’ experiences.
-**Coauthors: Jordana Schiralli and Dr. Rebecca Neel**"
+summary: "Do women percieve that race affects their experiences as women? Do they think this differs for women of other races? 560 Black, East Asian, and White women described how race influences their own and other-race women’s experiences. Preliminary observations suggest differences that will be formally tested, e.g.,  Black and East Asian women feel stereotyped as strong or feminine, respectively."
+abstract: ""
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -68,3 +66,5 @@ slides: ""
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+Intersectional approaches suggest that women’s experiences may differ depending on their race. Do women themselves perceive these race-based differences, and how do they think their own experiences differ from women of other races? We asked 560 monoracial Black, East Asian, and White women a series of open-ended questions about how their race influences their experience as a woman (if at all), and whether they perceive their experiences as being different from women of other racial groups. These open-ended data are currently being analyzed by a team of research assistants for common themes and patterns. Preliminary observations suggest that Black women often reported being expected by others to be strong, whereas Asian women reported having to fulfill the stereotypical role of “mother” and “wife.” Additionally, White women perceived Asian and Black women as receiving greater negative treatment due to experiencing both racism and sexism. This research helps us understand the intricacies of how race impacts women’s experiences as well as their perceptions of others’ experiences.
+**Coauthors**: Jordana Schiralli and Dr. Rebecca Neel
