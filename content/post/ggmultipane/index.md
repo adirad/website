@@ -32,10 +32,13 @@ Visualizing data can be difficult when you are trying to present multiple variab
 
 ##### Load in Dataset 
 
-In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use "penguins", see ?penguins for more information. Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. 
+In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use "penguins". Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. 
 
 ```{r dataset, warning=F}
 library(palmerpenguins)
+
+#?penguins #can be used to find more information about the penguins dataset
+
 data("penguins")
 head(penguins)
 penguins <- na.omit(penguins) 
