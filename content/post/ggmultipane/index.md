@@ -197,12 +197,12 @@ library(ggpubr)
 #create the first plot
 plot1 <- ggplot(penguins,aes(x=body_mass_g, y=bill_depth_mm, color=species))+ 
   geom_point(shape=21, position="jitter")+ #jitter adds random noise to each element and avoids overplotting
-  geom_smooth(method=lm , color="black",se=T) +
+  geom_smooth(method=lm , color="black",se=T) + #add a regression line to see 
   theme_clean()+
   theme(plot.title=element_text(size=9),
         axis.text.x = element_text(size=7),
-      axis.text.y = element_text(size=7))+
-  labs(title="Body Mass by Bill Depth", x="", y="Body Depth (mm)")
+      axis.text.y = element_text(size=7))+ #change the font size of the titles in the first plot 
+  labs(title="Body Mass by Bill Depth", x="", y="Body Depth (mm)") #titles of axes and plot 1
 #create the second plot
 plot2 <- ggplot(penguins,aes(x=body_mass_g, y=bill_length_mm, color=species))+
   geom_point(shape=21, position="jitter")+
@@ -223,10 +223,10 @@ plot3 <- ggplot(penguins,aes(x=body_mass_g, y=flipper_length_mm, color=species))
   labs(title="Body Mass by Flipper Length", x="", y="Flipper Length (mm)")
 
 #put all three plots together into one multipanel plot
-multi_plot<- ggarrange(plot1,plot2,plot3,
-                       labels = c("A", "B", "C"),
-                       ncol = 3, nrow = 1,
-                       common.legend = T)
+multi_plot<- ggarrange(plot1,plot2,plot3, #plots that are going to be included in this multipanel figure
+                       labels = c("A", "B", "C"), #labels given each panel 
+                       ncol = 3, nrow = 1, #adjust plot space 
+                       common.legend = T) #does the plot have a common legend
 #add titles and labels to the multi-panel graph
 multi_plot <- annotate_figure(multi_plot,
                                      top = text_grob("Measurements of Penguin Species", color = "black", face = "bold", size = 11),
