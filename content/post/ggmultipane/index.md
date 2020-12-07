@@ -51,9 +51,9 @@ First, let's look at the relationship between bill length and bill depth in peng
 plot(penguins$bill_length_mm, penguins$bill_depth_mm, 
      col= penguins$species,
      pch=16,
-     xlab="Bill Length (mm)",
-     ylab="Bill Depth (mm)",
-     main="A: Bill Length by Bill Depth ")
+     xlab="Bill Length (mm)", #label for x-axis
+     ylab="Bill Depth (mm)", #label for y-axis
+     main="A: Bill Length by Bill Depth ") #plot title
 ```
 {{< figure library="true" src="lengthvdepth.png" >}}
 
@@ -61,14 +61,14 @@ However, in addition to this, we want to visually display information about the 
 
 ```{r box, echo=F}
 a<- boxplot(penguins$bill_depth_mm ~ penguins$species,
-        xlab="Species",
-        ylab="Bill Depth (mm)",
-        main="B: Bill Depth by species")
+        xlab="Species", #label for x-axis
+        ylab="Bill Depth (mm)", #label for y-axis 
+        main="B: Bill Depth by species") #plot label
 b<- boxplot(penguins$bill_length_mm ~ penguins$species,
-        xlab="Species",
-        ylab="Bill Length (mm)",
-        main="C: Bill Length by species")
-box <- rbind(a,b)
+        xlab="Species", 
+        ylab="Bill Length (mm)", 
+        main="C: Bill Length by species") 
+box <- rbind(a,b) #view both boxplot "a" and "b" together
 ```
 {{< figure library="true" src="Rplot.png" >}}
 
@@ -83,11 +83,11 @@ parameter <- par(mfrow=c(1,3))
 parameter <- plot(penguins$bill_length_mm, penguins$bill_depth_mm, 
      col= penguins$species,
      pch=16,
-     xlab="Bill Length (mm)",
-     ylab="Bill Depth (mm)",
-     main="A: Bill Length by Bill Depth ")
+     xlab="Bill Length (mm)", #label for x-axis
+     ylab="Bill Depth (mm)", #label for y-axis
+     main="A: Bill Length by Bill Depth ") #plot title
 parameter <- boxplot(penguins$bill_depth_mm ~ penguins$species,
-        xlab="Species",
+        xlab="Species", 
         ylab="Bill Depth (mm)",
         main="B: Bill Depth by species")
 parameter <- boxplot(penguins$bill_length_mm ~ penguins$species,
@@ -110,13 +110,13 @@ layout.show(n=3)
 Using the layout() function, we can plot the same graphs in an adjusted plot space: 
 
 ```{r layoutfinal, echo=T}
-layout <- layout(matrix(c(1,1,2,3), 2, 2, byrow = F)) 
+layout <- layout(matrix(c(1,1,2,3), 2, 2, byrow = F)) #adjusting plot space 
 layout <- plot(penguins$bill_length_mm, penguins$bill_depth_mm, 
-     col= penguins$species,
+     col= penguins$species, 
      pch=16,
-     xlab="Bill Depth (mm)",
-     ylab="Bill Length (mm)",
-     main="A: Bill Length by Bill Depth ")
+     xlab="Bill Length (mm)", #label for x-axis
+     ylab="Bill Depth (mm)", #label for y-axis
+     main="A: Bill Length by Bill Depth ") #plot title
 layout <- boxplot(penguins$bill_depth_mm ~ penguins$species,
         xlab="Species",
         ylab="Bill Depth (mm)",
@@ -125,24 +125,24 @@ layout <- boxplot(penguins$bill_length_mm ~ penguins$species,
         xlab="Species",
         ylab="Bill Length (mm)",
         main="C: Bill Length by species")
-layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-1)
+layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-1) #title for entire plot
 ```
 {{< figure library="true" src="layout.png" >}}
 
 
 ## Marginal Plots 
 
-Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra:ggMarginal. This is not a multi panel graph. Using this method, we see the the marginal distributions of the x- and y- axis within the scatterplot. You lose some information in this marginal plot, as it only gives you the boxplots of cumulative bill depth and bill length whereas the previous two plots can separate the boxplot by each species. 
+Another way of displaying the relationship between bill length and bill depth AND information about the distributions of bill length and bill depth together is using ggExtra::ggMarginal. This is not a multi panel graph. Using this method, we see the the marginal distributions of the x- and y- axis within the scatterplot. You lose some information in this marginal plot, as it only gives you the boxplots of cumulative bill depth and bill length whereas the previous two plots can separate the boxplot by each species. 
 
 ```{r marginal, echo=T, warning=F}
 library(ggplot2) #for creating figures 
 library(ggExtra) #for building graphs into the margins
 marginal <- ggplot(penguins, aes(x=bill_length_mm, y=bill_depth_mm, color=species))+
   geom_point(position="jitter")+
-  theme(legend.position = "bottom")+
+  theme(legend.position = "bottom")+ #change the location of the legend
   labs(title= "Bill Length by Bill Depth with Boxplots", x="Bill Length (mm)", y="Bill Depth (mm)")
 marginal<- ggMarginal(marginal, type="boxplot")
-marginal
+marginal #view final plot 
 ```
 {{< figure library="true" src="marginal.png" >}}
 
@@ -173,7 +173,7 @@ A different method of displaying the count of penguins separated by sex and gend
 ```{r facet, echo=T}
 peng_facet <- ggplot(penguins, aes(x=species, fill=sex))+
   geom_bar(show.legend = F)+ #remove the legend from the graph
-  facet_wrap(~sex) + #create panels differentiated by sex 
+  facet_wrap(~sex) + #create a panel for each sex 
   scale_fill_brewer(palette="Pastel1")+ #altering colors of the figure 
   theme_classic()+
   labs(title="Frequency of Species Separated by sex", #change the title of the figure
@@ -194,14 +194,16 @@ Finally, we want to see how body mass (g) relates to bill length (mm), bill dept
 
 ```{r arrange, echo=T, warning=F, message=F}
 library(ggpubr)
-plot1 <- ggplot(penguins,aes(x=body_mass_g, y=bill_depth_mm, color=species))+
-  geom_point(shape=21, position="jitter")+
+#create the first plot
+plot1 <- ggplot(penguins,aes(x=body_mass_g, y=bill_depth_mm, color=species))+ 
+  geom_point(shape=21, position="jitter")+ #jitter adds random noise to each element and avoids overplotting
   geom_smooth(method=lm , color="black",se=T) +
   theme_clean()+
   theme(plot.title=element_text(size=9),
         axis.text.x = element_text(size=7),
       axis.text.y = element_text(size=7))+
   labs(title="Body Mass by Bill Depth", x="", y="Body Depth (mm)")
+#create the second plot
 plot2 <- ggplot(penguins,aes(x=body_mass_g, y=bill_length_mm, color=species))+
   geom_point(shape=21, position="jitter")+
   geom_smooth(method=lm , color="black",se=T) +
@@ -210,6 +212,7 @@ plot2 <- ggplot(penguins,aes(x=body_mass_g, y=bill_length_mm, color=species))+
         axis.text.x = element_text(size=7),
       axis.text.y = element_text(size=7))+
   labs(title="Body Mass by Bill Length", x="", y="Body Length (mm)")
+#create the third plot
 plot3 <- ggplot(penguins,aes(x=body_mass_g, y=flipper_length_mm, color=species))+
   geom_point(shape=21, position="jitter")+
   geom_smooth(method=lm , color="black",se=T) +
@@ -218,6 +221,8 @@ plot3 <- ggplot(penguins,aes(x=body_mass_g, y=flipper_length_mm, color=species))
         axis.text.x = element_text(size=7),
       axis.text.y = element_text(size=7))+
   labs(title="Body Mass by Flipper Length", x="", y="Flipper Length (mm)")
+
+#put all three plots together into one multipanel plot
 multi_plot<- ggarrange(plot1,plot2,plot3,
                        labels = c("A", "B", "C"),
                        ncol = 3, nrow = 1,
