@@ -32,18 +32,19 @@ Visualizing data can be difficult when you are trying to present multiple variab
 
 ##### Load in Dataset 
 
-In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use "penguins". Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. 
+In all these examples, we will use the penguins dataset in the palmerpenguins package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use "penguins". Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. Additionally, we will be using the package ggthemes for additional themes that will be useful.
 
 ```{r dataset, warning=F}
 library(palmerpenguins)
 
 #?penguins #can be used to find more information about the penguins dataset
 
-data("penguins")
+data("penguins"
 head(penguins)
 penguins <- na.omit(penguins) 
-```
 
+library(ggthemes) #load this package to get additional themes that can be used for ggplot (e.g., theme_clean())
+```
 {{% toc %}}
 
 
