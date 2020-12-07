@@ -14,14 +14,18 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include romantic relationships and intergroup variables, such as culture or racial identity.
+bio: ""
 
 interests:
 - Interpersonal Relationships 
 - Intergroup vs. Intragroup Relations
+- Stereotyping, Prejudice, and Discrimination
 
 education:
   courses:
+  - course: MSc in Psychology 
+    institution: University of Western Ontario
+    year: "in progress"
   - course: BSc in Psychology & Global Health
     institution: University of Toronto
     year: 2020
