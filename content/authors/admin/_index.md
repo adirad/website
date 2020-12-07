@@ -17,7 +17,8 @@ organizations:
 bio: ""
 
 interests:
-- Interpersonal Relationships 
+- Close Relationships 
+- Romantic Relationships
 - Intergroup vs. Intragroup Relations
 - Stereotyping, Prejudice, and Discrimination
 
