@@ -110,7 +110,7 @@ layout.show(n=3)
 Using the layout() function, we can plot the same graphs in an adjusted plot space: 
 
 ```{r layoutfinal, echo=T}
-layout <- layout(matrix(c(1,1,2,3), 2, 2, byrow = F)) #adjusting plot space 
+layout <- layout(matrix(c(1,1,2,3), 2, 2, byrow = F)) #adjust plot space 
 layout <- plot(penguins$bill_length_mm, penguins$bill_depth_mm, 
      col= penguins$species, 
      pch=16,
@@ -235,4 +235,3 @@ multi_plot
 ```
 {{< figure library="true" src="multiplot.png" >}}
 
-Thus, there are multiple ways of creating multipanel plots in R. 
