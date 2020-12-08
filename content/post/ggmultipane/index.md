@@ -245,6 +245,7 @@ arrange #view the multi-panel figure
 Finally, using *ggpubr::ggarrange* provides the most control over the different elements of the plot. You can control the plots, the labels, and easily add a common legend. *Cowplot* and *patchwork* packages do not allow you to create a common legend easily, thus a lot of your graph space is taken up by the legend rather than the graph itself.
 
 ```{r echo=T}
+library(gpubr) #load in library for multi-panel figures
 #put all three plots together into one multipanel plot
 multi_plot<- ggarrange(p1,p2,p3,p4, #plots that are going to be included in this multipanel figure
                        labels = c("A", "B", "C","D"), #labels given each panel 
@@ -367,7 +368,6 @@ grid <- ggplot(penguins, aes(x=body_mass_g, y=flipper_length_mm))+
        y="Flipper Length (mm)") #change the label of the y axis
 grid #view the multi-panel figure
 ```
-
 {{< figure library="true" src="peng_facetgrid.png" >}}
 
 ## Conclusion
