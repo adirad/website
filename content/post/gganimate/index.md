@@ -179,11 +179,11 @@ The animations create a more exciting way to talk about the mean distributions o
 {{< figure library="true" src="boxanim.gif" >}}
 
 ## Summary 
-In this post, we went over the following methods for creating animations using continuous variables. 
+In this post, we went over the following methods for creating animations using continuous variables: 
 * Using *transition_reveal()* function
 * Using *transition_time()* function 
 
-And animations using discrete variables 
+And animations using discrete variables:
 * Using *transition_states()* function
 
 Try one or more of these transitions with your data! Let me know [here](https://adiradaniel.netlify.app/#contact) if this tutorial was helpful or not. What kinds of content would you like to see more on this blog?
