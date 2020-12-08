@@ -3,7 +3,7 @@
 
 title: "Moving Pictures?! Animated Figures in R"
 subtitle: ""
-summary: ""
+summary: "Plots with multiple variables can be difficult to process and explain, especially in an oral presentation. Animated figures can be incredibly helpful for such presentations!"
 authors: []
 tags: []
 categories: []
@@ -27,3 +27,4 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
