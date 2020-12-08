@@ -276,7 +276,7 @@ multi_plot <- annotate_figure(multi_plot,
                               top = text_grob("Measurements of Penguin Species", color = "black", face = "bold", size = 11))
 multi_plot 
 ```
-{{< figure library="true" src="multiplota.png" >}}
+{{< figure library="true" src="multiplotb.png" >}}
 
 ## Specialized multi-panel figures
 ### Marginal Plots
@@ -349,7 +349,7 @@ peng <- ggplot(penguins, aes(x=species, fill=sex))+
        fill="Penguin Sex") #change the title of the legend
 peng 
 ```
-{{< figure library="true" src="peng.png" >}}
+{{< figure library="true" src="penga.png" >}}
 
 This graph can be a little hard to read. Another method of displaying the 
 count of penguins separated by sex and gender is by using [*ggplot2:facet_wrap()*](http://zevross.com/blog/2019/04/02/easy-multi-panel-plots-in-r-using-facet_wrap-and-facet_grid-from-ggplot2/). These functions will allow you to create multiple panels using information from categorical variables in the data. 
