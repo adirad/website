@@ -1,13 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "How a mate-seeking motivation affects the social invisibility of smiling Black and White men and women."
-summary: "Presented poster at the Psychology Research Opportunity Forum Examined the effects of a mate-seeking motivation on diverse racial groups and ages on memory of Black and White opposite-sex faces; this is an ongoing line of research with several different studies. Conducted at the Stigma and Motivation Lab at the University of Toronto, under the supervision of Dr. Rebecca Neel. 
-"
+title: "Romantic Relationships"
+summary: "Research examining romantic relationships with individuals in the same versus different social groups."
 authors: []
 tags: []
 categories: []
-#date: 2020-11-15T12:08:30-05:00
+date: 2020-12-07T22:48:33-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""

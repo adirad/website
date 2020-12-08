@@ -1,12 +1,12 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Examining outcomes of sibling comparisons across cultures."
-summary: "Undergraduate Honors Thesis. Measured differences in harmfulness and usefulness ratings of sibling comparisons in interdependent versus independent individuals. Conducted at the Lockwood Lab at the University of Toronto, under the supervision of Drs. Penelope Lockwood and Claire Midgley."
-authors:
+title: "Sibling Relationships"
+summary: "Reseach examining sibling relationships in multiple contexts"
+authors: []
 tags: []
 categories: []
-date: 2020-11-14T23:06:08-05:00
+date: 2020-12-07T22:48:25-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -14,10 +14,10 @@ external_link: ""
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
-#image:
-  #caption: ""
-  #focal_point: ""
-  #preview_only: false
+image:
+  caption: ""
+  focal_point: ""
+  preview_only: false
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.
@@ -39,5 +39,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
-
-
+**Examining outcomes of sibling comparisons across cultures.**
+*Undergraduate Honors Thesis.* Measured differences in harmfulness and usefulness ratings of sibling comparisons in interdependent versus independent individuals. Conducted at the Lockwood Lab at the University of Toronto, under the supervision of Drs. Penelope Lockwood and Claire Midgley."
