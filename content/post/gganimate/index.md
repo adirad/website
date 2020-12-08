@@ -30,6 +30,8 @@ projects: []
 
 Static plots can be difficult to process as a viewer and difficult to explain as a presenter. One technique to work with busy plots may be to embed transitions into them to help walk through them during oral presentations. We’ll walk through some *gganimate* transitions that may be helpful for walking through figures. 
 
+{{% toc %}}
+
 ## Load in dataset + relevant libraries
 In all these examples, we will use the penguins dataset in the *palmerpenguins* package. Instructions to download this package can be found [here](https://allisonhorst.github.io/palmerpenguins/). This package includes two datasets but we will use penguins. Before using this data in figures, we omitted any rows with one or more cells using the na.omit() function. Additionally, we will be loading in the following packages: *ggplot2*, *RcolorBrewer*, and *gganimate*.
 
