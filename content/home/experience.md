@@ -19,9 +19,9 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Graduate Teaching Assistant"
-  company = "Department of Psychology"
+  company = ""
   company_url = ""
-  location = "University of Western Ontario"
+  location = "Department of Psychology- University of Western Ontario"
   date_start = "2020-09-01"
   date_end = ""
   description = """

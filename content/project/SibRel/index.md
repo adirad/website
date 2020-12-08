@@ -40,4 +40,4 @@ url_video: ""
 slides: ""
 ---
 **Examining outcomes of sibling comparisons across cultures.**
-*Undergraduate Honors Thesis.* Measured differences in harmfulness and usefulness ratings of sibling comparisons in interdependent versus independent individuals. Conducted at the Lockwood Lab at the University of Toronto, under the supervision of Drs. Penelope Lockwood and Claire Midgley."
+*Undergraduate Honors Thesis.* Measured differences in harmfulness and usefulness ratings of sibling comparisons in interdependent versus independent individuals. Conducted at the Lockwood Lab at the University of Toronto, under the supervision of Drs. Penelope Lockwood and Claire Midgley.
