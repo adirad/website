@@ -52,7 +52,7 @@ library(gganimate) # to add animations to visualizations
 The *transition_reveal()* function reveals each new frame of a dimension gradually. Usually, this dimension is a continuous variable or a time series. The *transition_time()* function can be used for continuous variables or where the variables are representing specific points in time. In both of these functions, you can specify the range of the variable using the *"range="* argument of these functions. 
 
 ### transition_reveal
-Static plot:
+Static plot of bill and flipper length separated by sex:
 ```{r}
 linestatic <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=sex))+
   geom_line(show.legend=F)+
@@ -74,21 +74,22 @@ lineanim <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=se
   transition_reveal(bill_length_mm) #gganimate part; continuous variable 
 lineanim # view animated graph
 ```
+See how much more more sense it makes when you animate the plot! You can actually talk through the differences across sexes more clearly using this animation.
 {{< figure library="true" src="lineanim.gif" >}}
 
 ### transition_time 
-Static plot:
+Static plot of body mass and flipper length by species:
 ```{r}
 bubstatic <- ggplot(penguins, aes(body_mass_g, flipper_length_mm, 
                                 colour = species)) +
-  geom_point(alpha=0.7, show.legend = F) + # alpha = opacity of points 
+  geom_point(alpha=0.7, show.legend = T) + # alpha = opacity of points 
   scale_color_brewer(palette="Dark2")+ 
   theme_classic()+
   labs(x="Body Mass (g)", y="Flipper Length (mm)", # label axes
        title="Body Mass and Flipper Length by Species and Bill Length") # label figure
 bubstatic # view static plot 
 ```
-{{< figure library="true" src="bubstatic.png" >}}
+{{< figure library="true" src="bubstatica.png" >}}
 
 Animated Plot:
 ```{r}
@@ -103,26 +104,27 @@ bubanim <- ggplot(penguins, aes(body_mass_g, flipper_length_mm,
   ease_aes('linear') # adjusts the speed of the asethetic; smooths the animation out 
 bubanim # view animated plot
 ```
-{{< figure library="true" src="bubanim.gif" >}}
+With the animation, you can now discuss the relationship between body mass and flipper length across time.  
+{{< figure library="true" src="bubanima.gif" >}}
 
 ## Discrete variable?
 The *transition_states()* function animates the states of a discrete variable.
 
 ### transition_states
 #### Example 1
-Static Plot:
+Static Plot of body mass and flipper length by species:
 ```{r}
 pointstatic <- ggplot(penguins, 
                   aes(x=body_mass_g, 
                       y= flipper_length_mm))+
   geom_point(aes(color=species),
-             position="jitter", show.legend = F)+
+             position="jitter", show.legend = T)+
   theme_classic()+
   labs(x="Body Mass (g)", y="Flipper Length (mm)",
        title="Body Mass and Flipped Length by Penguin Species")
 pointstatic # view static plot
 ```
-{{< figure library="true" src="pointstatic.png" >}}
+{{< figure library="true" src="pointstatica.png" >}}
 
 Animated Plot:
 ```{r}
@@ -142,12 +144,13 @@ pointanim <- ggplot(penguins,
           subtitle = 'Frame {frame} of {nframes}') # label each frame of the animation 
 pointanim # view anim plot 
 ```
+See, with the animation its much easier to talk about the the relationship of body mass of each species individually and all the penguins together. 
 {{< figure library="true" src="pointanim.gif" >}}
 
 #### Example 2
 These transitions can be useful for going through even simpler graphs like this example. 
 
-Static Plot:
+Static Plot of body mass across species and sex:
 ```{r}
 boxstatic <- ggplot(penguins, aes(x=species, y=body_mass_g, color=sex))+
   geom_boxplot(show.legend = F)+
@@ -172,7 +175,14 @@ boxanim<- ggplot(penguins, aes(x=species, y =body_mass_g,color=sex))+
   ease_aes('sine-in-out') # adjusts the speed of the asethetic; smooths the animation out 
 boxanim # view animated plot 
 ```
+The animations create a more exciting way to talk about the mean distributions of body mass across species and sex!
 {{< figure library="true" src="boxanim.gif" >}}
 
-## Conclusion
+## Summary 
+In this post, we went over the following methods for creating animations using continuous variables. 
+* Using *transition_reveal*
+* Using *transition_time*
+And animations using discrete variables 
+* Using *transition_states*
+
 Try one or more of these transitions with your data! Let me know [here](https://adiradaniel.netlify.app/#contact) if this tutorial was helpful or not. What kinds of content would you like to see more on this blog?
