@@ -124,7 +124,7 @@ layout <- mtext("Bill Length and Bill Depth by Species", side=3, outer=T, line=-
 ```
 {{< figure library="true" src="layouttwo.png" >}}
 
-Additional examples of how to use the *layout()* function can be found [here](https://www.r-graph-gallery.com/75-split-screen-with-layout.html).
+Additional examples of how to use the *layout()* function can be found [here](https://www.r-graph-gallery.com/75-split-screen-with-layout.html). Using *layout()* also changes the proportions of the graphs which may affect the final interpretation of results.
 
 The main downside of using *par()* parameter and *layout()* function in baseR, is that you can only use plots created using baseR code. While baseR can be useful for creating basic plots, it has limited functionality. The next few sections cover multi-panel figure using plots created with the *ggplot2* package, which allows more flexibilty when creating figures. 
 

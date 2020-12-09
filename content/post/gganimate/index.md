@@ -51,32 +51,6 @@ library(gganimate) # to add animations to visualizations
 ## Continuous variable? 
 The *transition_reveal()* function reveals each new frame of a dimension gradually. Usually, this dimension is a continuous variable or a time series. The *transition_time()* function can be used for continuous variables or where the variables are representing specific points in time. In both of these functions, you can specify the range of the variable using the *"range="* argument of these functions. 
 
-### transition_reveal
-Static plot of bill and flipper length separated by sex:
-```{r}
-linestatic <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=sex))+
-  geom_line(show.legend=F)+
-  geom_point(show.legend=F)+ 
-  theme_classic()+
-  labs(x="Bill Length (mm)", y= "Flipper Length (mm)", # label axes
-       title="Bill and Flipper Length by Sex") # label figure
-linestatic # view graph 
-```
-{{< figure library="true" src="linestatic.png" >}}
-
-Animated plot:
-```{r}
-lineanim <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=sex))+
-  geom_line(show.legend=F)+
-  theme_classic()+
-  labs(x="Bill Length (mm)", y= "Flipper Length (mm)", # label axes
-       title="Bill and Flipper Length by Sex")+ # label figure 
-  transition_reveal(bill_length_mm) #gganimate part; continuous variable 
-lineanim # view animated graph
-```
-See how much more more sense it makes when you animate the plot! You can actually talk through the differences across sexes more clearly using this animation.
-{{< figure library="true" src="lineanim.gif" >}}
-
 ### transition_time 
 Static plot of body mass and flipper length by species:
 ```{r}
@@ -107,11 +81,36 @@ bubanim # view animated plot
 With the animation, you can now discuss the relationship between body mass and flipper length across time.  
 {{< figure library="true" src="bubanima.gif" >}}
 
+### transition_reveal
+Static plot of bill and flipper length separated by sex:
+```{r}
+linestatic <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=sex))+
+  geom_line(show.legend=F)+
+  geom_point(show.legend=F)+ 
+  theme_classic()+
+  labs(x="Bill Length (mm)", y= "Flipper Length (mm)", # label axes
+       title="Bill and Flipper Length by Sex") # label figure
+linestatic # view graph 
+```
+{{< figure library="true" src="linestatic.png" >}}
+
+Animated plot:
+```{r}
+lineanim <- ggplot(penguins, aes(x=bill_length_mm, y=flipper_length_mm, color=sex))+
+  geom_line(show.legend=F)+
+  theme_classic()+
+  labs(x="Bill Length (mm)", y= "Flipper Length (mm)", # label axes
+       title="Bill and Flipper Length by Sex")+ # label figure 
+  transition_reveal(bill_length_mm) #gganimate part; continuous variable 
+lineanim # view animated graph
+```
+See how much more more sense it makes when you animate the plot! You can actually talk through the differences across sexes more clearly using this animation.
+{{< figure library="true" src="lineanim.gif" >}}
+
 ## Discrete variable?
 The *transition_states()* function animates the states of a discrete variable.
 
 ### transition_states
-#### Example 1
 Static Plot of body mass and flipper length by species:
 ```{r}
 pointstatic <- ggplot(penguins, 
@@ -147,41 +146,11 @@ pointanim # view anim plot
 See, with the animation its much easier to talk about the the relationship of body mass of each species individually and all the penguins together. 
 {{< figure library="true" src="pointanim.gif" >}}
 
-#### Example 2
-These transitions can be useful for going through even simpler graphs like this example. 
-
-Static Plot of body mass across species and sex:
-```{r}
-boxstatic <- ggplot(penguins, aes(x=species, y=body_mass_g, color=sex))+
-  geom_boxplot(show.legend = F)+
-  theme_clean()+
-  labs(x="Penguin Species", y="Body Mass (g)", # label the axes
-       title = "Body Mass by Species and Sex") # label the title 
-boxstatic # view static plot 
-```
-{{< figure library="true" src="boxstatic.png" >}}
-
-Animated Plot:
-```{r}
-boxanim<- ggplot(penguins, aes(x=species, y =body_mass_g,color=sex))+
-  geom_boxplot(show.legend = F)+
-  theme_clean()+
-  labs(x="Penguin Species", y="Body Mass (g)", # label axes
-       title = "Body Mass by Species and Sex")+ #label title 
-  transition_states(species, # discrete variable
-                    transition_length = 2, # length of transition between discrete variable groups
-                    state_length = 1)+ # duration of animation on each group of the discrete variable
-  exit_shrink() + # modifys aesthetics of disappearing data
-  ease_aes('sine-in-out') # adjusts the speed of the asethetic; smooths the animation out 
-boxanim # view animated plot 
-```
-The animations create a more exciting way to talk about the mean distributions of body mass across species and sex!
-{{< figure library="true" src="boxanim.gif" >}}
 
 ## Summary 
 In this post, we went over the following methods for creating animations using continuous variables: 
-* Using *transition_reveal()* function
 * Using *transition_time()* function 
+* Using *transition_reveal()* function
 
 And animations using discrete variables:
 * Using *transition_states()* function
