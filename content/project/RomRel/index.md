@@ -43,6 +43,7 @@ slides: ""
 
 {{% staticref "files/ConcurrentConsent.pdf" "newtab" %}} Download Consent Form for **Couples Interview _(together)_** {{% /staticref %}}.
 
+
 {{% staticref "files/StaggeredConsent.pdf" "newtab" %}} Download Consent Form for **Couples Interview _(separately)_** {{% /staticref %}}.
 
 {{% staticref "files/IndividualConsent.pdf" "newtab" %}} Download Consent Form for **Individual Interviews** {{% /staticref %}}.
