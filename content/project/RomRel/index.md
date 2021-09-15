@@ -6,7 +6,7 @@ summary: "Research examining romantic relationships with individuals in the same
 authors: []
 tags: []
 categories: []
-date: 2020-12-07T22:48:33-05:00
+date: 2021-09-14T22:48:33-05:00
 
 # Optional external URL for project (replaces project detail page).
 external_link: ""
@@ -39,5 +39,12 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+## Links to Interview Consent and Debriefing Forms 
 
-{{% staticref "files/cv.pdf" "newtab" %}}Download my CV{{% /staticref %}}.
+{{% staticref "files/ConcurrentConsent.pdf" "newtab" %}} Download Consent Form for **Couples Interview _(together)_** {{% /staticref %}}.
+
+{{% staticref "files/StaggeredConsent.pdf" "newtab" %}} Download Consent Form for **Couples Interview _(separately)_** {{% /staticref %}}.
+
+{{% staticref "files/IndividualConsent.pdf" "newtab" %}} Download Consent Form for **Individual Interviews** {{% /staticref %}}.
+
+{{% staticref "files/Debrief.pdf" "newtab" %}} Download Debrief Form for **_all_** Interviews {{% /staticref %}}.
