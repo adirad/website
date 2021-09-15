@@ -39,3 +39,5 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+
+{{% staticref "files/cv.pdf" "newtab" %}}Download my CV{{% /staticref %}}.
